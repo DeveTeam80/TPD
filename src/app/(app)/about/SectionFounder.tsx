@@ -1,3 +1,4 @@
+// src/app/(app)/about/SectionFounder.tsx
 const FOUNDERS = [
   {
     id: '1',
@@ -36,7 +37,7 @@ const FOUNDERS = [
   },
   {
     id: '6',
-    name: `Michael O\'Brien`,
+    name: `Michael O'Brien`, // Fixed apostrophe
     job: 'Lead Designer',
     avatar:
       'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=3744&auto=format&fit=crop',
@@ -51,7 +52,7 @@ export default function SectionFounder() {
           Meet Our Team
         </h2>
         <p className="mt-6 text-lg/8 text-neutral-600 dark:text-neutral-400">
-          We're a passionate team dedicated to celebrating leadership excellence and fostering meaningful connections
+          We&apos;re a passionate team dedicated to celebrating leadership excellence and fostering meaningful connections
           across industries and borders.
         </p>
       </div>

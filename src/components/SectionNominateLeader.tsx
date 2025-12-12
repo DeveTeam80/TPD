@@ -34,7 +34,7 @@ const SectionNominateLeader: FC<Props> = ({
         </span>
         <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Know an Influential Leader?</h2>
         <span className="mt-8 block text-neutral-500 dark:text-neutral-400">
-          Our directory is built by the community. Nominate a respected individual who is making their mark to be featured. Everyone's welcome to contribute.
+          Our directory is built by the community. Nominate a respected individual who is making their mark to be featured. Everyone&apos;s welcome to contribute.
         </span>
         <ButtonPrimary className="mt-8" onClick={handleNominateClick}>
           Nominate a Leader

@@ -32,7 +32,7 @@ const LatestIssue = () => {
           {/* Description */}
           <p className="mb-12 text-xl leading-relaxed text-neutral-600 dark:text-neutral-400">
             Featuring exclusive interviews with industry pioneers, in-depth profiles, 
-            and insights from the world's most influential leaders.
+            and insights from the world&apos;s most influential leaders.
           </p>
 
           {/* CTA */}

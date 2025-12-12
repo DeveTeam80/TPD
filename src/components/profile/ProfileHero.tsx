@@ -39,11 +39,6 @@ const ProfileHero: FC<ProfileHeroProps> = ({ person }) => {
               {person.industry}
             </div>
 
-            {/* Greeting */}
-            <p className="mb-2 text-lg text-neutral-500 dark:text-neutral-400">
-              Hi, I'm
-            </p>
-
             {/* Name */}
             <h1 className="mb-6 text-5xl font-bold leading-tight text-neutral-900 dark:text-neutral-100 lg:text-6xl">
               {person.name}

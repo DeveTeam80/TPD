@@ -44,7 +44,7 @@ export default function SectionStatistic() {
         </h2>
         <p className="mt-6 text-base/7 text-neutral-600 dark:text-neutral-400">
           Our platform connects exceptional leaders across industries and regions, creating a global network of
-          influence, innovation, and inspiration. These numbers reflect our growing community's reach and impact.
+          influence, innovation, and inspiration. These numbers reflect our growing community&apos;s reach and impact.
         </p>
       </div>
       <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">

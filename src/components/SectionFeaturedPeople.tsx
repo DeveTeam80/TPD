@@ -9,7 +9,8 @@ import { useCarouselArrowButtons } from '@/hooks/use-carousel-arrow-buttons'
 import clsx from 'clsx'
 import { HeadingWithSubProps } from '@/shared/Heading'
 import HeadingWithArrowBtns from '@/shared/HeadingWithArrowBtns'
-import ProfileCard, { Person } from '@/components/ProfileCard' // Import Person from ProfileCard
+import ProfileCard from '@/components/ProfileCard' // Import Person from ProfileCard
+import { Person } from '@/data/people'
 
 export interface SectionFeaturedPeopleProps extends Pick<HeadingWithSubProps, 'subHeading' | 'dimHeading'> {
   className?: string

@@ -56,17 +56,18 @@ const SectionSuccessStories: FC<SectionSuccessStoriesProps> = ({ className = '' 
                 <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
               ))}
             </div>
-            
+
             {/* Quote */}
             <p className="mb-6 text-neutral-700 dark:text-neutral-300">
-              "{testimonial.quote}"
+              &ldquo;{testimonial.quote}&rdquo;
+
             </p>
-            
+
             {/* Metric Badge */}
             <div className="mb-6 inline-block rounded-full bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700 dark:bg-primary-500/10 dark:text-primary-400">
               {testimonial.metric}
             </div>
-            
+
             {/* Author */}
             <div className="flex items-center gap-4">
               <div className="relative h-12 w-12 overflow-hidden rounded-full">

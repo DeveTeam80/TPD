@@ -58,7 +58,7 @@ export default function SitemapPage() {
             Site Map
           </h1>
           <p className="mt-4 text-lg text-neutral-600 dark:text-neutral-400">
-            Navigate through all pages of People's Directory
+            Navigate through all pages of People&apos;s Directory
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export default function SitemapPage() {
         {/* Footer Note */}
         <div className="mt-16 rounded-2xl bg-neutral-100 p-8 text-center dark:bg-neutral-800">
           <p className="text-sm text-neutral-600 dark:text-neutral-400">
-            Can't find what you're looking for?{' '}
+            Can&apos;t find what you&apos;re looking for?{' '}
             <Link href="/contact" className="font-semibold text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
               Contact us
             </Link>

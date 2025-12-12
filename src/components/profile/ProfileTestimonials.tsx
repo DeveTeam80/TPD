@@ -31,7 +31,7 @@ const ProfileTestimonials: FC<ProfileTestimonialsProps> = ({ testimonials }) => 
             </div>
 
             <p className="mb-6 text-lg italic leading-relaxed text-neutral-700 dark:text-neutral-300">
-              "{testimonial.quote}"
+              &ldquo;{testimonial.quote}&rdquo;
             </p>
 
             <div className="flex items-center gap-4">

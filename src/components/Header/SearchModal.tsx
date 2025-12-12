@@ -306,7 +306,8 @@ const SearchModal: FC<Props> = ({ type = 'type1' }) => {
                 {query && !isSearching && people.length > 0 && (
                   <ComboboxOptions static className="p-2">
                     <div className="mb-2 px-2 text-xs font-semibold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
-                      Profiles matching "{query}"
+                      Profiles matching &ldquo;{query}&rdquo;
+
                     </div>
                     {people.map((person) => (
                       <ComboboxOption
@@ -336,7 +337,7 @@ const SearchModal: FC<Props> = ({ type = 'type1' }) => {
                       No leaders found
                     </h3>
                     <p className="mx-auto mt-1 max-w-xs text-sm text-neutral-500 dark:text-neutral-400">
-                      We couldn't find anything matching "{query}". Try searching for a different keyword.
+                      We couldn&apos;t find anything matching &ldquo;{query}&rdquo;. Try searching for a different keyword.
                     </p>
                   </div>
                 )}

@@ -130,7 +130,7 @@ const PageAbout = ({ }) => {
             </div>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Our Vision</h2>
             <p className="mt-6 text-base/7 text-neutral-600 dark:text-neutral-400">
-              To become the world's most trusted platform for discovering, connecting with, and learning from
+              To become the world&apos;s most trusted platform for discovering, connecting with, and learning from
               exceptional leaders who are making a difference in their fields.
             </p>
             <p className="mt-4 text-base/7 text-neutral-600 dark:text-neutral-400">

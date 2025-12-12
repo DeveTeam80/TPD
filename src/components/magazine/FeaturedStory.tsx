@@ -27,7 +27,7 @@ const FeaturedStory: FC<FeaturedStoryProps> = ({ person }) => {
 
           {/* Title */}
           <h2 className="mb-8 font-serif text-5xl font-bold leading-tight lg:text-6xl">
-            The Visionary Behind {person.industry}'s Transformation
+            The Visionary Behind {person.industry} Transformation
           </h2>
 
           {/* Subtitle */}
@@ -66,10 +66,10 @@ const FeaturedStory: FC<FeaturedStoryProps> = ({ person }) => {
                 <p className="mb-6 text-lg leading-relaxed">
                   In the heart of {person.city}, {person.name} has been quietly revolutionizing 
                   the {person.industry} landscape. What started as a bold vision has transformed 
-                  into a movement that's reshaping how we think about innovation and leadership.
+                  into a movement that&apos;s reshaping how we think about innovation and leadership.
                 </p>
                 <p className="mb-6 text-lg leading-relaxed">
-                  "The future belongs to those who dare to imagine it differently," {person.name.split(' ')[0]} reflects. 
+                  &ldquo;The future belongs to those who dare to imagine it differently,&rdquo; {person.name.split(' ')[0]} reflects. 
                   This philosophy has guided every decision, every pivot, and every triumph along an extraordinary journey.
                 </p>
               </>

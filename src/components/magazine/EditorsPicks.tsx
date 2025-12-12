@@ -23,7 +23,7 @@ const EditorsPicks: FC<EditorsPicksProps> = ({ people }) => {
               </span>
             </div>
             <h2 className="font-serif text-4xl font-bold text-white lg:text-5xl">
-              Editor's Picks
+              Editor&apos;s Picks
             </h2>
             <div className="mt-4 h-1 w-20 rounded-full bg-yellow-400" />
           </div>

@@ -3,6 +3,7 @@
 import { CustomLink } from '@/data/types'
 import Logo from '@/shared/Logo'
 import SocialsList1 from '@/shared/SocialsList1'
+import Link from 'next/link'
 import React from 'react'
 
 export interface WidgetFooterMenu {
@@ -109,7 +110,7 @@ const Footer: React.FC = () => {
         {/* Bottom bar */}
         <div className="container mt-12 border-t border-neutral-200 pt-8 dark:border-neutral-700">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400 sm:flex-row">
-            <p>© {new Date().getFullYear()} People's Directory. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} People&apos;s Directory. All rights reserved.</p>
             <div className="flex gap-6">
               <a 
                 href="#" 
@@ -132,12 +133,12 @@ const Footer: React.FC = () => {
               >
                 Cookie Policy
               </a>
-              <a 
+              <Link
                 href="/sitemap" 
                 className="hover:text-black dark:hover:text-white"
               >
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </div>

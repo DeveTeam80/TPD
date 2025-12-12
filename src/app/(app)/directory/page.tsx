@@ -5,8 +5,39 @@ import { Metadata } from 'next'
 import { Suspense } from 'react'
 
 export const metadata: Metadata = {
-  title: 'Directory | Distinguished Leaders',
-  description: 'Browse our directory of distinguished leaders from around the world',
+  title: 'The People\'s Directory',
+  description: `Browse our comprehensive directory of ${peopleData.length}+ distinguished leaders, innovators, and visionaries from around the world. Filter by industry, location, and expertise to find the leaders shaping tomorrow.`,
+  keywords: [
+    'leadership directory',
+    'global leaders directory',
+    'business leaders',
+    'technology innovators',
+    'healthcare leaders',
+    'sustainability champions',
+    'industry experts',
+    'professional profiles',
+  ],
+  openGraph: {
+    title: 'Directory - The People\'s Directory',
+    description: `Browse our comprehensive directory of ${peopleData.length}+ distinguished leaders and visionaries from around the world.`,
+    url: 'https://thepeoplesdirectory.com/directory',
+    images: [
+      {
+        url: '/og-directory.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The People\'s Directory - Browse Leaders',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Directory - The People\'s Directory',
+    description: `Browse our comprehensive directory of ${peopleData.length}+ distinguished leaders and visionaries from around the world.`,
+  },
+  alternates: {
+    canonical: '/directory',
+  },
 }
 
 // Loading fallback component

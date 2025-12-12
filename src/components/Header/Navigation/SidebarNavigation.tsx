@@ -11,7 +11,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { Search01Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
-import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 interface Props {
@@ -20,6 +20,7 @@ interface Props {
 
 const SidebarNavigation: React.FC<Props> = ({ data }) => {
   const handleClose = useClose()
+  const router = useRouter()
 
   const _renderMenuChild = (
     item: TNavigationItem,
@@ -85,14 +86,14 @@ const SidebarNavigation: React.FC<Props> = ({ data }) => {
         onSubmit={(e) => {
           e.preventDefault()
           handleClose()
-          redirect('/search')
+          router.push('/directory')
         }}
       >
         <div className="flex h-full items-center gap-x-2.5 rounded-xl bg-neutral-50 px-3 py-3 dark:bg-neutral-800">
           <HugeiconsIcon icon={Search01Icon} size={24} color="currentColor" strokeWidth={1.5} />
           <input
             type="search"
-            placeholder="Type and press enter"
+            placeholder="Search leaders..."
             className="w-full border-none bg-transparent focus:ring-0 focus:outline-hidden sm:text-sm"
           />
         </div>
@@ -103,8 +104,8 @@ const SidebarNavigation: React.FC<Props> = ({ data }) => {
 
   return (
     <div>
-      <p className="text-sm/relaxed">
-        Discover the most outstanding articles on all topics of life. Write your stories and share them
+      <p className="text-sm/relaxed text-neutral-600 dark:text-neutral-400">
+        Discover distinguished leaders, innovators, and visionaries shaping industries and communities worldwide. Connect with influential individuals making a difference.
       </p>
       <div className="mt-5 flex items-center justify-between">
         <SocialsList />
@@ -113,14 +114,9 @@ const SidebarNavigation: React.FC<Props> = ({ data }) => {
       <ul className="flex flex-col gap-y-1 px-2 py-6">{data?.map(_renderItem)}</ul>
       <Divider className="mb-6" />
 
-      {/* FOR OUR DEMO */}
       <div className="flex items-center justify-between gap-x-2.5 py-6">
-        <ButtonPrimary
-          href="https://themeforest.net/item/ncmaz-blog-news-magazine-nextjs-template/44412092"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Buy this template
+        <ButtonPrimary href="/directory" onClick={handleClose}>
+          Browse Directory
         </ButtonPrimary>
 
         <SwitchDarkMode />

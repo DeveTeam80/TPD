@@ -1,0 +1,91 @@
+{
+  "title": "Naqiyah Burhanuddin - Director & Academic Head | Educational Strategist & Founder",
+  "description": "Profile of Naqiyah Burhanuddin, Director of Rawdat al-Quran al-Kareem. An educational leader specializing in nature-based learning, curriculum reform, and holistic child development.",
+  "ogTitle": "Naqiyah Burhanuddin | Visionary Educator & Director - Rawdat al-Quran al-Kareem",
+  "ogDescription": "Meet Naqiyah Burhanuddin, a pioneer in modern education. Discover her work with Rawdat al-Quran al-Kareem, Cubs, Fawns & Foals, and her advocacy for \"learning through play.\"",
+  "canonical": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin",
+  "imageAlts": {
+    "profile": "Naqiyah Burhanuddin - Director of Rawdat al-Quran al-Kareem and Educational Strategist",
+    "event": "Students at Mumbai Meri Jaan Festival organized by Naqiyah Burhanuddin",
+    "workshop": "Naqiyah Burhanuddin conducting Mind Mapping and nature-based learning workshops",
+    "logo": "Rawdat al-Quran al-Kareem logo - Educational initiative led by Naqiyah Burhanuddin"
+  },
+  "customJsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin",
+        "url": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin",
+        "name": "Naqiyah Burhanuddin - Educational Leader",
+        "description": "Profile of Naqiyah Burhanuddin, Director of Rawdat al-Quran al-Kareem and expert in educational pedagogy.",
+        "mainEntity": {
+          "@id": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin#person"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thepeoplesdirectory.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Naqiyah Burhanuddin",
+              "item": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin#person",
+        "name": "Naqiyah Husain Burhanuddin",
+        "alternateName": "Naqiyah Burhanuddin",
+        "jobTitle": [
+          "Director",
+          "Academic Head",
+          "Founder"
+        ],
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Rawdat al-Quran al-Kareem",
+            "url": "https://rawdatalquran.com"
+          }
+        ],
+        "founder": {
+          "@type": "Organization",
+          "name": "Cubs, Fawns & Foals"
+        },
+        "alumniOf": [
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "D’Youville College",
+            "location": "USA"
+          },
+          {
+            "@type": "CollegeOrUniversity",
+            "name": "Al Jamea-tus-Saifiyah"
+          }
+        ],
+        "knowsAbout": [
+          "Curriculum Development",
+          "Nature-Based Learning",
+          "Islamic Education",
+          "Mind Mapping",
+          "Early Childhood Education"
+        ],
+        "description": "Naqiyah Burhanuddin is the Director and Academic Head of Rawdat al-Quran al-Kareem. She holds a Master's in Education from D'Youville College and advocates for the 'power of play' in learning.",
+        "url": "https://www.thepeoplesdirectory.com/naqiyah-burhanuddin",
+        "sameAs": [
+          "https://www.instagram.com/naqiyahburhanuddin",
+          "https://rawdatalquran.com"
+        ]
+      }
+    ]
+  }
+}

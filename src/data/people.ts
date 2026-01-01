@@ -71,6 +71,19 @@ export type Person = {
     isbn?: string // Optional
     description?: string // Short abstract
   }[]
+  // 🆕 CUSTOM SEO OVERRIDE
+  seo?: {
+    title?: string
+    description?: string
+    keywords?: string
+    ogImage?: string
+    ogTitle?: string
+    ogDescription?: string
+    twitterImage?: string
+    canonical?: string
+    robots?: string
+    jsonLd?: any | any[]
+  }
 }
 
 // A helper type that omits 'slug' from Person for our base data

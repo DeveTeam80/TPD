@@ -1,7 +1,7 @@
+// src/app/SiteHeader.tsx or Header2.tsx
 import { getNavigation } from '@/data/navigation'
 import { Button } from '@/shared/Button'
 import Logo from '@/shared/Logo'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import { FC } from 'react'
 import HamburgerBtnMenu from './HamburgerBtnMenu'
@@ -31,9 +31,11 @@ const Header2: FC<Props> = async ({ bottomBorder, className }) => {
       <div className="container flex h-20 justify-between">
         <div className="flex flex-1 items-center gap-x-4 sm:gap-x-5 lg:gap-x-7">
           <Logo />
-          <div className="h-8 border-l hidden sm:block"></div>
-          <div className="hidden sm:block">
-            <SearchModal type="type1" />
+          {/* Remove divider on small screens, show on medium+ */}
+          <div className="hidden h-8 border-l md:block"></div>
+          {/* Desktop Search - Better positioning */}
+          <div className="hidden md:block md:min-w-[280px] lg:min-w-[320px]">
+            <SearchModal type="type2" />
           </div>
         </div>
 
@@ -42,10 +44,10 @@ const Header2: FC<Props> = async ({ bottomBorder, className }) => {
         </div>
 
         <div className="flex flex-1 items-center justify-end gap-x-2">
-          {/* Mobile Search Button */}
-          <Button className="h-10 w-10 p-0 sm:hidden" plain>
-            <MagnifyingGlassIcon className="h-5 w-5" />
-          </Button>
+          {/* Mobile Search - Icon only */}
+          <div className="md:hidden">
+            <SearchModal type="type1" />
+          </div>
 
           {/* Auth Buttons - Show when NOT authenticated */}
           {!isAuthenticated && (

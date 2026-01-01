@@ -6,9 +6,19 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 
 interface ProfileVenturesProps {
     ventures: NonNullable<Person['ventures']>
+    customAlts?: Record<string, string> // Added prop
 }
 
-const ProfileVentures: FC<ProfileVenturesProps> = ({ ventures }) => {
+const ProfileVentures: FC<ProfileVenturesProps> = ({ ventures, customAlts }) => {
+    
+    // Helper to normalize venture names to JSON keys (e.g. "Le Mirage" -> "le_mirage")
+    const getAlt = (name: string) => {
+        if (!customAlts) return name;
+        const key = name.toLowerCase().replace(/\s+/g, '_');
+        // Priority: 1. Specific key, 2. Generic 'logos' key, 3. Original Name
+        return customAlts[key] || customAlts.logos || name;
+    }
+
     return (
         <section>
             <div className="mb-12">
@@ -30,7 +40,7 @@ const ProfileVentures: FC<ProfileVenturesProps> = ({ ventures }) => {
                                 <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800">
                                     <Image
                                         src={venture.logo}
-                                        alt={venture.name}
+                                        alt={getAlt(venture.name)} // Updated Alt
                                         fill
                                         className="object-cover"
                                     />

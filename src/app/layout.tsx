@@ -1,9 +1,9 @@
 // app/layout.tsx
 import '@/styles/tailwind.css'
-import { Metadata } from 'next'
 import { Be_Vietnam_Pro } from 'next/font/google'
 import ThemeProvider from './theme-provider'
 import Script from 'next/script'
+import { generateSEOMetadata } from '../../lib/useSeo' // Import the SEO helper
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ['latin'],
@@ -11,67 +11,31 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ['300', '400', '500', '600', '700'],
 })
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | The People\'s Directory',
-    default: 'The People\'s Directory - Global Leaders & Visionaries',
-  },
-  description: 'Discover and connect with distinguished leaders, innovators, and visionaries shaping industries worldwide. Browse profiles of influential individuals across technology, business, healthcare, sustainability, and more.',
-  keywords: [
-    'leadership directory',
-    'global leaders',
-    'visionaries',
-    'innovators',
-    'industry leaders',
-    'business executives',
-    'technology leaders',
-    'healthcare innovators',
-    'sustainability champions',
-    'influential people',
-    'professional network',
-    'leadership profiles',
-  ],
-  authors: [{ name: 'The People\'s Directory' }],
-  creator: 'The People\'s Directory',
-  publisher: 'The People\'s Directory',
-  metadataBase: new URL('https://thepeoplesdirectory.com'), // Update with your actual domain
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'The People\'s Directory - Global Leaders & Visionaries',
-    description: 'Discover and connect with distinguished leaders, innovators, and visionaries shaping industries worldwide.',
-    url: 'https://thepeoplesdirectory.com', // Update with your actual domain
-    siteName: 'The People\'s Directory',
-    images: [
-      {
-        url: '/og-image.jpg', // Add your OG image
-        width: 1200,
-        height: 630,
-        alt: 'The People\'s Directory',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'The People\'s Directory - Global Leaders & Visionaries',
-    description: 'Discover and connect with distinguished leaders, innovators, and visionaries shaping industries worldwide.',
-    images: ['/twitter-image.jpg'], // Add your Twitter image
-    creator: '@thepeoplesdirectory', // Update with your Twitter handle
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+// Replace static metadata object with dynamic generator
+export async function generateMetadata() {
+  // 1. Fetch the base metadata (Title, Desc, OpenGraph, JSON-LD) from meta.json
+  const baseMetadata = await generateSEOMetadata('/');
+
+  // 2. Return it, optionally enhancing specific fields like robots
+  return {
+    ...baseMetadata,
+    title: {
+      template: '%s | The People\'s Directory',
+      default: baseMetadata.title as string || 'The People\'s Directory',
+    },
+    // Keep the robust robots settings (good for Google Discover/Images)
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     },
-  },
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

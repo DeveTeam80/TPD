@@ -1,0 +1,101 @@
+{
+  "home": {
+    "title": "The People's Directory | Biographies of Global Leaders",
+    "description": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "ogTitle": "The People's Directory | Biographies of Global Leaders",
+    "ogDescription": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.thepeoplesdirectory.com/directory?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "logo": "https://www.thepeoplesdirectory.com/_next/static/media/TPD%20logo.72c74f0c.png",
+          "sameAs": [
+            "https://www.facebook.com/share/1KJDj9XBqx/",
+            "https://www.instagram.com/thepeopledirectory/",
+            "https://www.linkedin.com/in/the-people-s-directory-212619399/"
+          ],
+          "description": "A global directory featuring exclusive biographies of affluent and influential leaders and visionaries."
+        }
+      ]
+    }
+  },
+  "directory": {
+    "title": "Directory - The People's Directory | Biographies of Global Leaders",
+    "description": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "ogTitle": "The People's Directory | Biographies of Global Leaders",
+    "ogDescription": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.thepeoplesdirectory.com/directory?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "logo": "https://www.thepeoplesdirectory.com/_next/static/media/TPD%20logo.72c74f0c.png",
+          "sameAs": [
+            "https://www.facebook.com/share/1KJDj9XBqx/",
+            "https://www.instagram.com/thepeopledirectory/",
+            "https://www.linkedin.com/in/the-people-s-directory-212619399/"
+          ],
+          "description": "A global directory featuring exclusive biographies of affluent and influential leaders and visionaries."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About Us - The People's Directory | Biographies of Global Leaders",
+    "description": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "ogTitle": "The People's Directory | Biographies of Global Leaders",
+    "ogDescription": "The premier destination for exclusive profiles of the world's most influential and affluent visionaries. Read the untold success stories.",
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.thepeoplesdirectory.com/directory?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "The People's Directory",
+          "url": "https://www.thepeoplesdirectory.com/",
+          "logo": "https://www.thepeoplesdirectory.com/_next/static/media/TPD%20logo.72c74f0c.png",
+          "sameAs": [
+            "https://www.facebook.com/share/1KJDj9XBqx/",
+            "https://www.instagram.com/thepeopledirectory/",
+            "https://www.linkedin.com/in/the-people-s-directory-212619399/"
+          ],
+          "description": "A global directory featuring exclusive biographies of affluent and influential leaders and visionaries."
+        }
+      ]
+    }
+  }
+}

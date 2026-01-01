@@ -10,9 +10,10 @@ import {
 
 interface ProfileHeroProps {
   person: Person
+  customAlts?: Record<string, string> // Added prop
 }
 
-const ProfileHero: FC<ProfileHeroProps> = ({ person }) => {
+const ProfileHero: FC<ProfileHeroProps> = ({ person, customAlts }) => {
   return (
     <div className="relative bg-white dark:bg-neutral-900">
       <div className="container">
@@ -22,7 +23,8 @@ const ProfileHero: FC<ProfileHeroProps> = ({ person }) => {
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-neutral-100 dark:bg-neutral-800 lg:h-[600px]">
               <Image
                 src={person.avatarUrl}
-                alt={person.name}
+                // Priority: Custom 'profile' key > Person Name
+                alt={customAlts?.profile || person.name}
                 fill
                 className="object-cover object-center"
                 priority
@@ -76,4 +78,3 @@ const ProfileHero: FC<ProfileHeroProps> = ({ person }) => {
 }
 
 export default ProfileHero
-

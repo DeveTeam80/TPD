@@ -1,0 +1,85 @@
+{
+  "title": "Dr. Abdul Sami Bubere - Founder of Indo Gulf Times | Veteran Journalist & Peace Activist",
+  "description": "Tribute to Dr. Abdul Sami Bubere (d. 2025), Founder of Indo Gulf Times and President of World Peace Council (India). Discover the legacy of the \"Father of Diaspora Journalism\" and his 50+ years of service.",
+  "ogTitle": "Dr. Abdul Sami Bubere | Legacy of a Visionary Journalist & Peace Leader",
+  "ogDescription": "Remembering Dr. Abdul Sami Bubere, founder of Indo Gulf Times. Explore his lifelong dedication to journalism, Indo-Arab relations, and the Dawoodi Bohra community.",
+  "canonical": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere",
+  "imageAlts": {
+    "profile": "Dr. Abdul Sami Bubere - Late Founder of Indo Gulf Times and Veteran Journalist",
+    "dignitaries": "Dr. Abdul Sami Bubere with Syedna Mufaddal Saifuddin - Dawoodi Bohra History",
+    "speaking": "Dr. Abdul Sami Bubere addressing the World Peace Council India Chapter",
+    "newspaper": "Early edition of Indo Gulf Times founded by Dr. Abdul Sami Bubere",
+    "tribute": "Tribute to Dr. Abdul Sami Bubere - Father of Diaspora Journalism (1950s-2025)"
+  },
+  "customJsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere",
+        "url": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere",
+        "name": "Dr. Abdul Sami Bubere - Legacy Profile",
+        "description": "Biography and legacy of Dr. Abdul Sami Bubere, veteran journalist and founder of Indo Gulf Times.",
+        "mainEntity": {
+          "@id": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere#person"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thepeoplesdirectory.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Dr. Abdul Sami Bubere",
+              "item": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere#person",
+        "name": "Dr. Abdul Sami Bubere",
+        "honorificPrefix": "Dr.",
+        "jobTitle": [
+          "Founder",
+          "Editor-in-Chief",
+          "Journalist",
+          "Peace Activist"
+        ],
+        "deathDate": "2025-06-25",
+        "description": "Dr. Abdul Sami Bubere was the Founder of Indo Gulf Times and President of the World Peace Council (India Chapter). He was a veteran journalist known for bridging the gap between NRIs in the Gulf and India.",
+        "knowsAbout": [
+          "Diaspora Journalism",
+          "Indo-Arab Relations",
+          "Dawoodi Bohra History",
+          "World Peace Council"
+        ],
+        "founder": {
+          "@type": "Organization",
+          "name": "Indo Gulf Times",
+          "url": "https://indogulftimes.com"
+        },
+        "memberOf": {
+          "@type": "Organization",
+          "name": "World Peace Council (India Chapter)",
+          "roleName": "President"
+        },
+        "children": {
+          "@type": "Person",
+          "name": "Ahmar Bubere",
+          "url": "https://www.thepeoplesdirectory.com/ahmar-bubere"
+        },
+        "url": "https://www.thepeoplesdirectory.com/dr-abdul-sami-bubere",
+        "sameAs": [
+          "https://indogulftimes.com"
+        ]
+      }
+    ]
+  }
+}

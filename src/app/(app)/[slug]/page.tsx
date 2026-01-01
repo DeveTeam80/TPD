@@ -13,6 +13,19 @@ import ProfileSocials from '@/components/profile/ProfileSocials'
 import SectionFeaturedPeople from '@/components/SectionFeaturedPeople'
 import ProfileSidebarNav from '@/components/profile/ProfileSidebarNav'
 import ProfilePublications from '@/components/profile/ProfilePublications'
+import ProfileSEOContent from '@/components/profile/ProfileSEOContent'
+import ProfileAboutExpandable from '@/components/profile/ProfileAboutExpandable'
+
+// --- HELPER TO LOAD CUSTOM ALTS ---
+async function getCustomAlts(slug: string) {
+  try {
+    const data = await import(`@/seo/custom/people/${slug}.json`)
+    return data.imageAlts || {}
+  } catch (error) {
+    // Return empty object if file doesn't exist
+    return {}
+  }
+}
 
 interface ProfilePageProps {
   params: Promise<{
@@ -27,6 +40,9 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
   if (!person) {
     return { title: 'Profile Not Found' }
   }
+
+  // OPTIONAL: Load custom title/desc here if you aren't using useSeo.ts for this part
+  // const customData = await getCustomAlts(slug); 
 
   return {
     title: `${person.name} - ${person.influence} | Distinguished Leaders Directory`,
@@ -49,7 +65,6 @@ export async function generateStaticParams() {
   }))
 }
 
-// app/[slug]/page.tsx (fix the availableSections definition)
 export default async function ProfilePage({ params }: ProfilePageProps) {
   const { slug } = await params
   const person = peopleData.find(p => p.slug === slug)
@@ -58,7 +73,10 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
     notFound()
   }
 
-  // --- DEFINE THE SECTIONS THAT EXIST FOR THIS PERSON ---
+  // --- 1. LOAD CUSTOM ALT TAGS ---
+  const customAlts = await getCustomAlts(slug)
+
+  // --- DEFINE THE SECTIONS ---
   const availableSections = [
     { 
       id: 'about', 
@@ -99,7 +117,7 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
     { 
       id: 'publications', 
       label: 'Publications', 
-      iconName: 'articles' as const,  // Fixed: added 'as const'
+      iconName: 'articles' as const, 
       exists: person.publications && person.publications.length > 0 
     },
     { 
@@ -121,64 +139,82 @@ export default async function ProfilePage({ params }: ProfilePageProps) {
     <div className="relative bg-neutral-50 dark:bg-neutral-950">
       {/* Sidebar Navigation */}
       <ProfileSidebarNav sections={availableSections} />
+      
+      {/* Hidden SEO Content */}
+      <ProfileSEOContent person={person} />
 
-      {/* Hero Section */}
-      <ProfileDetailHero person={person} />
+      {/* Hero Section - PASSED customAlts prop */}
+      <ProfileDetailHero 
+        person={person} 
+        customAlts={customAlts} 
+      />
 
       {/* Main Content */}
       <div className="container py-16 lg:py-20">
         <div className="mx-auto max-w-6xl space-y-20 lg:space-y-32">
 
-          {/* About & Bio with ID */}
+          {/* About & Bio */}
           {person.bio && person.bio.length > 0 && (
             <div id="about">
               <ProfileAbout person={person} />
             </div>
           )}
 
-          {/* Achievements with ID */}
+          {/* Achievements - Passed customAlts (might have 'awards' alt) */}
           {person.achievements && person.achievements.length > 0 && (
             <div id="achievements">
-              <ProfileAchievements achievements={person.achievements} />
+              <ProfileAchievements 
+                achievements={person.achievements} 
+                customAlts={customAlts}
+              />
             </div>
           )}
 
-          {/* Ventures with ID */}
+          {/* Ventures - Passed customAlts (might have 'logos' alt) */}
           {person.ventures && person.ventures.length > 0 && (
             <div id="ventures">
-              <ProfileVentures ventures={person.ventures} />
+              <ProfileVentures 
+                ventures={person.ventures} 
+                customAlts={customAlts}
+              />
             </div>
           )}
 
-          {/* Media Appearances with ID */}
+          {/* Media Appearances - Passed customAlts (might have 'events' alt) */}
           {person.media && person.media.length > 0 && (
             <div id="media">
-              <ProfileMedia media={person.media} personName={person.name} />
+              <ProfileMedia 
+                media={person.media} 
+                personName={person.name}
+                customAlts={customAlts}
+              />
             </div>
           )}
 
-          {/* Articles with ID */}
+          {/* Articles */}
           {person.articles && person.articles.length > 0 && (
             <div id="articles">
               <ProfileArticles articles={person.articles} />
             </div>
           )}
 
-          {/* Publications with ID */}
+          {/* Publications */}
           {person.publications && person.publications.length > 0 && (
             <div id="publications" className="scroll-mt-24">
               <ProfilePublications publications={person.publications} />
             </div>
           )}
 
-          {/* Testimonials with ID */}
+          {/* Testimonials */}
           {person.testimonials && person.testimonials.length > 0 && (
             <div id="testimonials">
               <ProfileTestimonials testimonials={person.testimonials} />
             </div>
           )}
 
-          {/* Social Links with ID */}
+          <ProfileAboutExpandable person={person} />
+
+          {/* Social Links */}
           {person.socials && (
             <div id="connect">
               <ProfileSocials socials={person.socials} personName={person.name} />

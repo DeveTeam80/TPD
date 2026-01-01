@@ -1,0 +1,84 @@
+{
+  "title": "Ahmar Bubere - Executive Editor, Indo Gulf Times | Diaspora Journalism & Media Leader (India & Middle East)",
+  "description": "Profile of Ahmar Bubere, Executive Editor of Indo Gulf Times. A leading voice in Diaspora Journalism, strengthening Indo-Gulf relations and Dawoodi Bohra community ties. Discover his journey in global media and cultural diplomacy.",
+  "ogTitle": "Ahmar Bubere | Executive Editor & Media Strategist - Indo Gulf Times",
+  "ogDescription": "Meet Ahmar Bubere, the driving force behind Indo Gulf Times. Explore his work in bridging India and the Middle East through influential journalism and civic leadership.",
+  "canonical": "https://www.thepeoplesdirectory.com/ahmar-bubere",
+  "imageAlts": {
+    "profile": "Ahmar Bubere - Executive Editor of Indo Gulf Times and Media Strategist",
+    "banner": "Ahmar Bubere leading Diaspora Journalism and Indo-Gulf Relations at Indo Gulf Times",
+    "action": "Ahmar Bubere speaking on cultural diplomacy and media leadership in Mumbai",
+    "achievement": "Ahmar Bubere Presidential Recognition for Dawoodi Bohra community contributions",
+    "newspaper": "Indo Gulf Times special edition managed by Executive Editor Ahmar Bubere"
+  },
+  "customJsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.thepeoplesdirectory.com/ahmar-bubere",
+        "url": "https://www.thepeoplesdirectory.com/ahmar-bubere",
+        "name": "Ahmar Bubere - Executive Editor & Media Leader",
+        "description": "Profile of Ahmar Bubere, Executive Editor of Indo Gulf Times. A leading voice in Diaspora Journalism, strengthening Indo-Gulf relations.",
+        "mainEntity": {
+          "@id": "https://www.thepeoplesdirectory.com/ahmar-bubere#person"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thepeoplesdirectory.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Ahmar Bubere",
+              "item": "https://www.thepeoplesdirectory.com/ahmar-bubere"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.thepeoplesdirectory.com/ahmar-bubere#person",
+        "name": "Ahmar Bubere",
+        "givenName": "Ahmar",
+        "familyName": "Bubere",
+        "jobTitle": [
+          "Executive Editor",
+          "Media Professional",
+          "Journalist"
+        ],
+        "description": "Ahmar Bubere is the Executive Editor of the Indo Gulf Times and a specialist in India-Middle East diaspora affairs. He upholds the legacy of Dr. Abdul Sami Bubere, focusing on cultural diplomacy and civic initiatives.",
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Indo Gulf Times",
+            "url": "https://indogulftimes.com"
+          }
+        ],
+        "parent": {
+          "@type": "Person",
+          "name": "Dr. Abdul Sami Bubere"
+        },
+        "knowsAbout": [
+          "Diaspora Journalism",
+          "Indo-Gulf Relations",
+          "Media Strategy",
+          "Cultural Diplomacy",
+          "Dawoodi Bohra Community Affairs"
+        ],
+        "url": "https://www.thepeoplesdirectory.com/ahmar-bubere",
+        "sameAs": [
+          "https://in.linkedin.com/in/ahmar-bubere-25575a6a",
+          "https://www.instagram.com/bubereahmar/",
+          "https://www.facebook.com/ahmar.bubere/",
+          "https://indogulftimes.com"
+        ]
+      }
+    ]
+  }
+}

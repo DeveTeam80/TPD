@@ -1,0 +1,100 @@
+{
+  "title": "Murtaza Hamid - Digital Marketer & Brand Consultant | Founder of Visionary Services, Visionary Sight, Zodiaura & Kenyabizz Directory",
+  "description": "Discover the profile of Murtaza Hamid - a digital marketing strategist and brand consultant, and the founder of Visionary Services, Visionary Sight, Zodiaura, and Kenyabizz Directory. Learn about his journey, ventures, and impact in the global digital landscape.",
+  "ogTitle": "Murtaza Hamid | Visionary Digital Marketer & Brand Consultant",
+  "ogDescription": "Meet Murtaza Hamid, the founder of Visionary Services, Visionary Sight, Zodiaura, and Kenyabizz Directory. Explore his story, expertise, and entrepreneurial vision on The People’s Directory.",
+  "canonical": "https://thepeoplesdirectory.com/murtaza-hamid",
+  "imageAlts": {
+    "profile": "Murtaza Hamid - Digital Marketer and Brand Consultant",
+    "banner": "Murtaza Hamid founder of Visionary Services, Visionary Sight, Zodiaura and Kenyabizz Directory",
+    "logos": "Companies founded by Murtaza Hamid - Visionary Services, Visionary Sight, Zodiaura, Kenyabizz Directory",
+    "event": "Murtaza Hamid speaking on digital marketing and branding"
+  },
+  "customJsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.thepeoplesdirectory.com/murtaza-hamid",
+        "url": "https://www.thepeoplesdirectory.com/murtaza-hamid",
+        "name": "Murtaza Hamid - Digital Marketer & Brand Consultant",
+        "description": "Discover the profile of Murtaza Hamid - a digital marketing strategist and brand consultant, and the founder of Visionary Services, Visionary Sight, Zodiaura, and Kenyabizz Directory.",
+        "mainEntity": {
+          "@id": "https://www.thepeoplesdirectory.com/murtaza-hamid#person"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thepeoplesdirectory.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Murtaza Hamid",
+              "item": "https://www.thepeoplesdirectory.com/murtaza-hamid"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.thepeoplesdirectory.com/murtaza-hamid#person",
+        "name": "Murtaza Mustafa Hamid",
+        "alternateName": "Murtaza Hamid",
+        "givenName": "Murtaza",
+        "familyName": "Hamid",
+        "jobTitle": [
+          "Founder & CEO",
+          "Digital Marketer",
+          "Brand Consultant"
+        ],
+        "description": "Murtaza Mustafa Hamid is the Founder & CEO of Visionary Services and the driving force behind The Visionary Group. He is a digital marketing strategist known for his foundation-first approach.",
+        "birthPlace": {
+          "@type": "Place",
+          "name": "Jeddah"
+        },
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Visionary Services",
+            "url": "https://www.visionaryservices.com"
+          },
+          {
+            "@type": "Organization",
+            "name": "The Visionary Group"
+          }
+        ],
+        "founder": [
+          {
+            "@type": "Organization",
+            "name": "Visionary Services"
+          },
+          {
+            "@type": "Organization",
+            "name": "Visionary Sight"
+          },
+          {
+            "@type": "Organization",
+            "name": "Zodiaura"
+          }
+        ],
+        "knowsAbout": [
+          "Digital Marketing",
+          "Brand Consulting",
+          "Business Strategy",
+          "Niche-Exclusive Strategy"
+        ],
+        "url": "https://www.thepeoplesdirectory.com/murtaza-hamid",
+        "sameAs": [
+          "https://in.linkedin.com/in/murtaza-mohammed-mustafa-1a3721119",
+          "https://www.visionarybizz.com",
+          "https://www.instagram.com/mrtzm.mohd"
+        ]
+      }
+    ]
+  }
+}

@@ -8,15 +8,24 @@ import { MicrophoneIcon, VideoCameraIcon, NewspaperIcon } from '@heroicons/react
 interface ProfileMediaProps {
   media: NonNullable<Person['media']>
   personName: string
+  customAlts?: Record<string, string> // Added prop
 }
 
-const ProfileMedia: FC<ProfileMediaProps> = ({ media, personName }) => {
+const ProfileMedia: FC<ProfileMediaProps> = ({ media, personName, customAlts }) => {
 
     const iconMap = {
         'TEDx': VideoCameraIcon,
         'Podcast': MicrophoneIcon,
         'Interview': NewspaperIcon,
         'Documentary': VideoCameraIcon
+    }
+
+    // Helper to determine best Alt Tag
+    const getAlt = (title: string) => {
+        if (!customAlts) return title;
+        const key = title.toLowerCase().replace(/\s+/g, '_');
+        // Priority: 1. Specific key, 2. Generic 'event' key, 3. Generic 'action' key, 4. Original Title
+        return customAlts[key] || customAlts.event || customAlts.action || title;
     }
 
   return (
@@ -46,7 +55,7 @@ const ProfileMedia: FC<ProfileMediaProps> = ({ media, personName }) => {
               <div className="relative aspect-video overflow-hidden bg-neutral-200 dark:bg-neutral-800">
                 <Image
                   src={mediaItem.thumbnail}
-                  alt={mediaItem.title}
+                  alt={getAlt(mediaItem.title)} // Updated Alt
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />

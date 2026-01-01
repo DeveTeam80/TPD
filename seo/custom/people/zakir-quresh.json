@@ -1,0 +1,81 @@
+{
+  "title": "Zakir Quresh - Director, SMB Properties | Luxury Real Estate Developer (Kenya & East Africa)",
+  "description": "Profile of Zakir Quresh, Director of SMB Properties. A visionary in Kenyan luxury real estate, known for Le Mirage Residences, SMB Suites, and pioneering \"vertical cities\" in Nairobi and Mombasa.",
+  "ogTitle": "Zakir Quresh | Visionary Developer & MD - SMB Properties Kenya",
+  "ogDescription": "Meet Zakir Quresh, the leader behind SMB Properties. Explore his work in defining luxury living in East Africa through branded residences like Le Mirage and award-winning high-rises.",
+  "canonical": "https://www.thepeoplesdirectory.com/zakir-quresh",
+  "imageAlts": {
+    "profile": "Zakir Quresh - Director of SMB Properties and Luxury Real Estate Developer",
+    "project_le_mirage": "Le Mirage Residences Nairobi developed by Zakir Quresh and SMB Properties",
+    "project_smb_suites": "SMB Suites Mombasa - Award-winning luxury high-rise by Zakir Quresh",
+    "action": "Zakir Quresh discussing future of African real estate at industry forum",
+    "logo": "SMB Properties Kenya Logo - Leading Luxury Developers"
+  },
+  "customJsonLd": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://www.thepeoplesdirectory.com/zakir-quresh",
+        "url": "https://www.thepeoplesdirectory.com/zakir-quresh",
+        "name": "Zakir Quresh - Luxury Real Estate Developer",
+        "description": "Profile of Zakir Quresh, Director of SMB Properties, transforming Kenya's skyline with luxury branded residences and high-end hospitality projects.",
+        "mainEntity": {
+          "@id": "https://www.thepeoplesdirectory.com/zakir-quresh#person"
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.thepeoplesdirectory.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Zakir Quresh",
+              "item": "https://www.thepeoplesdirectory.com/zakir-quresh"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.thepeoplesdirectory.com/zakir-quresh#person",
+        "name": "Zakir Quresh",
+        "alternateName": [
+          "Taher Quresh Zakir",
+          "Zakir SMB Properties"
+        ],
+        "jobTitle": [
+          "Director",
+          "Managing Director"
+        ],
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "SMB Properties",
+            "url": "https://www.smb.ke"
+          }
+        ],
+        "knowsAbout": [
+          "Luxury Real Estate Development",
+          "Branded Residences",
+          "Vertical Cities",
+          "Hospitality Management",
+          "Property Investment in Kenya"
+        ],
+        "description": "Zakir Quresh is the Director and Managing Director of SMB Properties, a leading Kenyan real estate firm. He is known for iconic projects like Le Mirage Residences and SMB Suites.",
+        "award": "Best Luxury Residential Development (Luxury Lifestyle Awards 2021)",
+        "url": "https://www.thepeoplesdirectory.com/zakir-quresh",
+        "sameAs": [
+          "https://www.smb.ke",
+          "https://www.linkedin.com/in/YOUR-LINKEDIN-ID",
+          "https://twitter.com/YOUR-TWITTER-HANDLE"
+        ]
+      }
+    ]
+  }
+}

@@ -5,9 +5,10 @@ import { TrophyIcon, SparklesIcon, CheckBadgeIcon } from '@heroicons/react/24/ou
 
 interface ProfileAchievementsProps {
   achievements: NonNullable<Person['achievements']>
+  customAlts?: Record<string, string> // Added prop
 }
 
-const ProfileAchievements: FC<ProfileAchievementsProps> = ({ achievements }) => {
+const ProfileAchievements: FC<ProfileAchievementsProps> = ({ achievements, customAlts }) => {
 
   const iconMap = {
     award: TrophyIcon,

@@ -19,7 +19,7 @@ import ProfileAboutExpandable from '@/components/profile/ProfileAboutExpandable'
 // --- HELPER TO LOAD CUSTOM ALTS ---
 async function getCustomAlts(slug: string) {
   try {
-    const data = await import(`@/seo/custom/people/${slug}.json`)
+    const data = await import(`../../../../seo/custom/people/${slug}.json`)
     return data.imageAlts || {}
   } catch (error) {
     // Return empty object if file doesn't exist

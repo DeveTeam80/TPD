@@ -181,7 +181,7 @@ export default function SEODashboard() {
           </h3>
           <div className="space-y-2">
             <div className="rounded bg-neutral-100 p-3 font-mono text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
-              <span className="text-neutral-500">$</span> npm run generate:custom-seo jane-cooper "Dr. Jane Cooper" "Technology" "San Francisco"
+              <span className="text-neutral-500">$</span> npm run generate:custom-seo jane-cooper &quot;Dr. Jane Cooper&quot; &quot;Technology&quot; &quot;San Francisco&quot;
             </div>
             <div className="rounded bg-neutral-100 p-3 font-mono text-sm text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
               <span className="text-neutral-500">File:</span> seo/custom/people/jane-cooper.json

@@ -2,7 +2,7 @@
 
 import SectionHero from '@/components/SectionHero'
 import BreadcrumbsWrapper from '@/components/BreadcrumbsWrapper'
-import rightImg from '@/images/about-hero-right.png'
+import rightImg from '@/images/about.png'
 import { Button } from '@/shared/Button'
 import Input from '@/shared/Input'
 import { Divider } from '@/shared/divider'

@@ -1,10 +1,9 @@
 // app/sitemap.ts
 import { MetadataRoute } from 'next'
 import { peopleData } from '@/data/people'
-import { industries } from '@/data/industries'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://peoplesdirectory.com' // Replace with your actual domain
+  const baseUrl = 'https://www.thepeoplesdirectory.com'
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
@@ -18,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/directory`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/about`,
@@ -27,10 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
+      url: `${baseUrl}/sitemap`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
   ]
 
@@ -42,13 +41,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Industry pages (if you have them)
-  const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
-    url: `${baseUrl}/directory?industry=${encodeURIComponent(industry.name)}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.7,
-  }))
-
-  return [...staticPages, ...peoplePages, ...industryPages]
+  return [...staticPages, ...peoplePages]
 }

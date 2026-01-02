@@ -91,12 +91,12 @@ export default function SitemapPage() {
               title="About"
               description="Learn about our mission"
             />
-            <SitemapCard
+            {/* <SitemapCard
               href="/contact"
               icon={<EnvelopeIcon className="h-6 w-6" />}
               title="Contact"
               description="Get in touch with us"
-            />
+            /> */}
           </div>
         </section>
 

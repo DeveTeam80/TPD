@@ -1,4 +1,4 @@
-// app/profile/[slug]/page.tsx
+// src/app/(app)/[slug]/page.tsx
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { peopleData } from '@/data/people'
@@ -15,14 +15,22 @@ import ProfileSidebarNav from '@/components/profile/ProfileSidebarNav'
 import ProfilePublications from '@/components/profile/ProfilePublications'
 import ProfileSEOContent from '@/components/profile/ProfileSEOContent'
 import ProfileAboutExpandable from '@/components/profile/ProfileAboutExpandable'
+import { generateProfilePageSEOMetadata } from '../../../../lib/useSeo'
+import fs from 'fs'
+import path from 'path'
 
-// --- HELPER TO LOAD CUSTOM ALTS ---
 async function getCustomAlts(slug: string) {
   try {
-    const data = await import(`../../../../seo/custom/people/${slug}.json`)
+    // Construct absolute path using process.cwd() to be safe
+    const filePath = path.join(process.cwd(), 'seo', 'custom', 'people', `${slug}.json`)
+    
+    // Read and parse file
+    const fileContents = await fs.promises.readFile(filePath, 'utf8')
+    const data = JSON.parse(fileContents)
+    
     return data.imageAlts || {}
   } catch (error) {
-    // Return empty object if file doesn't exist
+    // If file doesn't exist or JSON is invalid, return empty object
     return {}
   }
 }
@@ -41,22 +49,9 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
     return { title: 'Profile Not Found' }
   }
 
-  // OPTIONAL: Load custom title/desc here if you aren't using useSeo.ts for this part
-  // const customData = await getCustomAlts(slug); 
-
-  return {
-    title: `${person.name} - ${person.influence} | Distinguished Leaders Directory`,
-    description: `${person.name} is a distinguished leader in ${person.industry} based in ${person.city}, ${person.country}. ${person.influence}`,
-    openGraph: {
-      title: `${person.name} - ${person.industry} Leader`,
-      description: person.influence,
-      images: [person.avatarUrl],
-      url: `/${person.slug}`,
-    },
-    alternates: {
-      canonical: `/${person.slug}`,
-    },
-  }
+  // USE CUSTOM SEO SYSTEM from useSeo.ts
+  // This will check: 1. Custom JSON file, 2. Person.seo object, 3. Auto-generated
+  return generateProfilePageSEOMetadata(person, `/${slug}`)
 }
 
 export async function generateStaticParams() {

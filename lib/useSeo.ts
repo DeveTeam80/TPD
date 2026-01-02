@@ -20,8 +20,6 @@ interface MetaDataItem {
   twitterImage?: string;
   author?: string;
   robots?: string;
-  // NEW: Added jsonLd support for static pages via meta.json
-  jsonLd?: any;
   aiAgent?: {
     intent?: string;
     entities?: string[];
@@ -318,13 +316,6 @@ export async function generateSEOMetadata(
       : finalMeta.keywords.split(',').map(k => k.trim())
     ) : [];
 
-  // Logic to determine the final JSON-LD object
-  // Priority: 1. customData.jsonLd (dynamic override), 2. finalMeta.jsonLd (static from meta.json)
-  const finalJsonLd = customData.jsonLd || finalMeta.jsonLd;
-
-  // Logic to determine final AI Agent data
-  const finalAiAgent = customData.aiAgent || finalMeta.aiAgent;
-
   const metadata: Metadata = {
     metadataBase: new URL(seoConfig.siteUrl),
     title: finalMeta.title,
@@ -379,20 +370,18 @@ export async function generateSEOMetadata(
     },
 
     other: {
-      // MODIFIED: Checks both dynamic customData and static meta.json for JSON-LD
-      ...(finalJsonLd ? {
+      ...(customData.jsonLd ? {
         'script:ld+json': JSON.stringify(
-          Array.isArray(finalJsonLd)
-            ? finalJsonLd
-            : [finalJsonLd]
+          Array.isArray(customData.jsonLd)
+            ? customData.jsonLd
+            : [customData.jsonLd]
         ),
       } : {}),
-
-      ...(finalAiAgent ? {
-        'ai-agent-intent': finalAiAgent.intent || '',
-        'ai-agent-entities': finalAiAgent.entities?.join(',') || '',
-        'ai-agent-topics': finalAiAgent.topics?.join(',') || '',
-        'ai-agent-conversational-hooks': finalAiAgent.conversationalHooks?.join('|') || '',
+      ...(customData.aiAgent || finalMeta.aiAgent ? {
+        'ai-agent-intent': (customData.aiAgent || finalMeta.aiAgent)?.intent || '',
+        'ai-agent-entities': (customData.aiAgent || finalMeta.aiAgent)?.entities?.join(',') || '',
+        'ai-agent-topics': (customData.aiAgent || finalMeta.aiAgent)?.topics?.join(',') || '',
+        'ai-agent-conversational-hooks': (customData.aiAgent || finalMeta.aiAgent)?.conversationalHooks?.join('|') || '',
       } : {}),
     },
   };
